@@ -13,24 +13,29 @@
 		<style type="text/css">
 
 
+		/* Outlines the grids, remove when sending
+		table td { border: 1px solid cyan; } */
+
 		/* CLIENT-SPECIFIC STYLES */
 		body, table, td, a, p { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 		img { -ms-interpolation-mode: bicubic; }
-		@media screen and (min-width: 639px)  {
-        .mobile-break { display: none; }
-    }
+		.mobile-break { display: none; }
+		strong {
+            font-weight: 900; 
+            text-transform: uppercase;
+        }
 
 
 		/* RESET STYLES */
 		img { border: 0; outline: none; text-decoration: none; }
 		table { border-collapse: collapse !important; }
-		body { Margin: 0 !important; padding: 0 !important; width: 100% !important; }
+		body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
 		h1, h2, h3, h4, h5, h6, p { margin: 0 !important; }
+		h1 {font-size: 44px;}
+		h2 {font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 24px;}
 
-		/* HIDE ON DESKTOP */
-		.desktopOff { max-height: 0px; font-size: 0px; display: none; }		
-
+			
 			
 		/* iOS BLUE LINKS */
 		a[x-apple-data-detectors] {
@@ -44,30 +49,21 @@
 
 		/* ANDROID CENTER FIX */
 		div[style*="margin: 16px 0;"] { margin: 0 !important; }
-.intro {
-    padding-right: 137px;
-}
 
+
+	
 
 		/* MEDIA QUERIES - THESE ARE MOBILE STYLES - STAY WITHIN THE @MEDIA CURLY BRACES */
-
-
-
 		@media all and (max-width:639px){ 
 			/*MOBILE RESET STYLES*/
-            .intro { padding-right: 0px !important;}
-			.mobile-380 { width:380px!important; padding: 0 !important; }
 			.mobile-360 { width:360px!important; padding: 0 !important; }
-			.mobile-340 { width:340px!important; padding: 0 !important; }
 			.mobile-320 { width:320px!important; padding: 0 !important; }
 			.mobile-300 { width:300px!important;  padding: 0 !important; }
-			.mobile-pad {margin-left: 20px!important; }
 			.stack { width:300px!important; display:block!important; padding: 0 !important; }
 			.img { width:100% !important; height:auto !important; }
 			/*MOBILE VISIBILITY*/
 			.mobileOff { width: 0px !important; display: none !important; }
-			.mobileOn { display: block !important;}
-
+			.mobileOn { display: block !important; max-height:none !important; font-size:10px !important; }
 			/*ALIGNERS*/
 			.center-align { text-align: center !important; margin: 0 auto !important; }
 			.left-align { text-align: left !important; }
@@ -75,64 +71,91 @@
 			/*HEIGHT PADDING*/
 			.h-pad { padding: 5px 0 !important; }
 			/*WIDTH PADDING*/
-			.w-pad { padding: 0 10px !important; }
-			.w-pad2 { padding: 0 0px !important; }
+			.w-pad { padding: 0 30px !important; }
+			.w-pad2 { padding: 0 10px !important; }
 			/*TEXT RESIZERS*/
-			.h1-text-resize { font-size: clamp(33px, 6vw, 56px)  !important; line-height:0.85 !important; }
-			.h2-text-resize { font-size:clamp(20px, 4vw, 36px) !important; line-height:1.2 !important; margin-top: 30px !important;}
+			.h1-text-resize { font-size:24px !important; line-height:1.2 !important; }
+			h1 {font-size: 11vw; line-height: 0.8;}
+			.h2-text-resize { font-size:18px !important; line-height:1.2 !important; }
 			.h3-text-resize { font-size:16px !important; line-height:1.2 !important; }
-			.intro-text-resize { width: 90% !important; font-size: clamp(20px, 2vw, 36px) !important; line-height:1.1em !important; }
-			.p-text-resize { width: 90% !important;  font-size:1em !important; line-height:1.5em !important; }
-			.footer-resize { font-size:0.7em !important; line-height:1.5em !important; letter-spacing: 0 !important; }
+			.body-text-resize { font-size:14px !important; line-height:1.2 !important; }
 			/*IMAGE RESIZERS*/
 			.imgresize100 img {width:100% !important; height:auto !important;}
 			.imgresize100h img {height:40px !important; width:auto !important;}
 			.imgresize10vw img {width:90vw !important; height:auto !important;}
 			.imgresize120 img {width:120% !important; height:auto !important;}
-			.imgresizeMobile {padding: 0 0px !important; margin: 0 !important;}
-			.imgresizeMobile img {width:80vw !important; height:auto !important;}
 			.imgresize90 img {width:90% !important; height:auto !important;}
 			/*WIDTH RESIZERS*/
 			.resize90 {width:90% !important; height:auto !important;}
-            .button {width:400px !important; height: 2vh !important; padding-left: 30px !important; font-size: 3.5em !important;}
+
 		/*INSERT ADDITIONAL MOBILE SYTLES ABOVE THIS LINE*/
 		}
 
-
 		/* HIDE ON DESKTOP */
-		.desktopOff { display: none !important;}
-		.desktopOn { display: block !important; max-height:none !important; font-size:10px !important; }
+		.desktopOff { max-height: 0px; font-size: 0px; display: none; }
 
 
 		/* LIGHT/DARK MODE CLASSES */
 
-		/* LIGHT COLOR SCHEME */
-        .standardMode { background-color: #0084ff  !important; color: #ffffff  !important; }
-		.footerMode {background-color: #ffffff  !important; color: #1e1e1e  !important;}
+		/* DARK MODE HIDE */
+		.darkMode { width: 0px !important; display: none !important; }
+		.lightMode { display: block !important; max-height:none !important; font-size:10px !important; }
 
+		/* LIGHT COLOR SCHEME */
+		.standardMode { background-color: #0084ff; }
+		.footerMode {background-color: #ffffff; color: #1e1e1e;}
+		.textMode {color: #ffffff}
+		.accentMode {color:#263543}
 
 		:root {
 			color-scheme: light dark;
 			supported-color-schemes: light dark;
 		  }
+		@media (prefers-color-scheme: dark) {
+			.lightimage { display: none !important;}
+	 		.darkimageWrapper,
+	 		.darkimage { display: block !important;}
+			.lightimageFooter { display: none !important;}
+	 		.darkimageWrapperFooter,
+	 		.darkimageFooter { display: inline-block !important;}
+			[data-ogsc] .darkimage {display: block !important;}
+			[data-ogsc] .lightimage {display: none !important;}
+		  }
 
 
+
+		  
 		/* DARK COLOR SCHEME */
 		@media (prefers-color-scheme: dark){ 
 			/*DARK MODE RESET STYLES*/
-			.standardMode { background-color: #0084ff  !important; color: #ffffff  !important; }
-            .footerMode {background-color: #ffffff  !important; color: #1e1e1e  !important;}
+			.lightMode { width: 0px !important; display: none !important; }
+			.darkMode { display: block !important; max-height:none !important; font-size:10px !important; }
+			.standardMode { background-color: #0084ff; }
+			.footerMode {background-color: #1e1e1e; color: #ffffff;}
+			.textMode {color: #ffffff;}
+			.accentMode {color: #263543;}
 		}
 		/*INSERT ADDITIONAL DARK MODE SYTLES ABOVE THIS LINE*/
-        
-        strong {
-            font-weight: 900; 
-            text-transform: uppercase;
-        }
+		em {
+			font-style: italic;
+		}
 
+		</style>
 
-
-
+<!--[if gte mso 16]> 
+<style> 
+.textMode { 
+mso-style-textfill-type:gradient; 
+mso-style-textfill-fill-gradientfill-stoplist:"0 \#4A4A4A -1 100000\,100000 \#4A4A4A -1 100000"; 
+color:#000000 !important; 
+} 
+.standardMode { 
+mso-style-textfill-type:gradient; 
+mso-style-textfill-fill-gradientfill-stoplist:"0 \#2b313f -1 100000\,100000 \#2b313f -1 100000"; 
+color:#e6e6e3 !important; 
+} 
+</style> 
+<![endif]-->
 
 		</style>
 
@@ -192,12 +215,12 @@ color:#000000 !important;
 
         <td align="center" valign="top">
         <!-- LOGO -->
-            <table class="mobile-340" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+            <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
             <!-- SPACER -->
                 <tr>
                     <td height="30" style="font-size:10px; line-height:1;">&nbsp;</td>
                 </tr>
-                <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+                <table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td class="imgresize100 img" align="left" valign="top">
                                 <img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_Harrisburg%20DARK.png" height="60" width="auto" style="margin:0; padding:0; border:none; display:block; max-width: 400px;" border="0" alt="The Patriot News Online" >
@@ -222,7 +245,7 @@ color:#000000 !important;
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-				<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 
 						<td align="left" valign="top">
@@ -266,7 +289,7 @@ color:#000000 !important;
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-			<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+			<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 				<tr>
 					<td align="left" valign="top">
                         <span>
@@ -283,7 +306,7 @@ color:#000000 !important;
 								-webkit-text-fill-color: #ffffff;
 								color:#ffffff"
 								class="intro-text-resize intro">
-                                <strong>FREE for subscribers!</strong> <br>All print customers can access <strong>EXTRA</strong> at no additional cost. </p>
+                                <strong>FREE for subscribers!</strong> All print customers can access <strong>EXTRA</strong> at no additional cost. </p>
                             </td>       
                         </span>
                     
@@ -300,174 +323,157 @@ color:#000000 !important;
 
 
 
-	<!-- SIDECARS -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#0084ff" class="standardMode">
-		<!-- SPACER -->
+<!-- SIDECARS -->
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#0084ff" class="standardMode">
+	<!-- SPACER -->
+		<tr>
+			<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+		<!-- PARENT ALIGNMENT TABLE -->
+			<table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					
+		<!-- IMAGE COLUMN -->
+				<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
+					<td class="stack imgresize100 img w-pad2"  width="425" align="left" valign="top" style="width:425px;">
 
-			<tr>
-				<td align="center" valign="top">
-			<!-- PARENT ALIGNMENT TABLE -->
-				<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
-					<tr>
-
-			<!-- CONTENT COLUMN -->
-						<td class="stack" width="35%" align="left" valign="top">
-						<table class="mobile-320" role="presentation"  cellpadding="0" cellspacing="0" border="0">
-                            
-
-<!-- FIRST LEFT SIDECAR CHUNK -->
-
-					<!-- BODY TEXT -->
-						<!-- ROW SPACER -->
-						<tr>
-							<td height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
-						</tr>
-							<tr>
-								<td class="left-align" align="left" valign="top">
-									<p style="
-										font-size: 1em; 
-										line-height: 1.4; 
-										font-family: Arial, sans-serif;
-										mso-generic-font-family: swiss;
-										font-weight: 400;
-										font-style: normal; 
-										text-transform: none;
-										display: inline-block;
-										-webkit-text-fill-color: #ffffff;
-										color:#ffffff;" 
-										class="p-text-resize"> Subscribers get free access to the online newspaper with special sections, the New York Times Book Review, and Washington Post Weekly by activating their account.</p>
-								</td>
-							</tr>
-						<!-- ROW SPACER -->
-                        <tr>
-                            <td height="25" style="font-size:10px; line-height:1;">&nbsp;</td>
-                        </tr>
-<!-- SECOND LEFT SIDECAR CHUNK -->
-
-					<!-- BODY TEXT -->
-							<tr>
-								<td class="left-align" align="left" valign="top">
-									<p style="
-										font-size: 1em; 
-										line-height: 1.4; 
-										font-family: Arial, sans-serif;
-										mso-generic-font-family: swiss;
-										font-weight: 400;
-										font-style: normal; 
-										text-transform: none;
-										display: inline-block;
-										-webkit-text-fill-color: #ffffff;
-										color:#ffffff;" 
-										class="p-text-resize"><strong>Don&#8217;t have a login?</strong><br>Start by activating your account. <br class="mobile-break"> <em>Click here.</em> </p>
-								</td>
-							</tr>
-						<!-- ROW SPACER -->
-							<tr>
-								<td height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
-							</tr>
-					<!-- BULLETPROOF BUTTON -->
-                    <tr>
-                        <!-- CHANGE ALIGMENT ON THIS <td> -->
-                        <td class="left-align" align="left" valign="top">
-                        <!-- WIDTH ADJUSTMENT TABLE
-                        ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
-                        <table class="left-align" width="224px" role="presentation" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
-                                <td style="padding: 15px 20px 15px 20px; background-color: #263543" align="left"onMouseOver="this.style.background='#ffffff'" 
-                                onMouseOut="this.style.background='#263543'">	
-                                    <a rel="noopener" href="https://myaccount.pennlive.com" target="_blank" style="font-family: Arial, sans-serif; mso-generic-font-family: swiss; font-weight: 800; font-style: normal; font-size: 16px; line-height: 18px; color:#0084ff; -webkit-text-fill-color: #0084ff; text-transform: uppercase; text-decoration: none; display: inline-block; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #0084ff; letter-spacing: -0.01px;">Activate account</a>
-                                </td>
-                            </tr>
-						<!-- ROW SPACER -->
-						<tr>
-							<td height="25" style="font-size:20px; line-height:1;">&nbsp;</td>
-						</tr>
-						
-							</tr>
-						</table>
-						</td>
-
-<!-- THIRD LEFT SIDECAR CHUNK -->
-
-					<!-- BODY TEXT -->
-					<tr>
-						<td class="left-align" align="left" valign="top">
-							<p style="
-									font-size: 1em; 
-									line-height: 1.4; 
-									font-family: Arial, sans-serif;
-									mso-generic-font-family: swiss;
-									font-weight: 400;
-									font-style: normal; 
-									text-transform: none;
-									display: inline-block;
-									-webkit-text-fill-color: #ffffff;
-									color:#ffffff;" 
-							class="p-text-resize"><strong>Already have a login? </strong><br>Explore your Online Newspaper. <br class="mobile-break"> <em>Click here.</em></p>
-						</td>
-					</tr>
-				<!-- ROW SPACER -->
-					<tr>
-						<td height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
-					</tr>
-			<!-- BULLETPROOF BUTTON -->
-			<tr>
-				<!-- CHANGE ALIGMENT ON THIS <td> -->
-				<td class="left-align" align="left" valign="top">
-				<!-- WIDTH ADJUSTMENT TABLE
-				ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
-				<table class="left-align" width="224px" role="presentation" border="0" cellspacing="0" cellpadding="0">
-					<tr>
-						<!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
-                            <td style="padding: 15px 20px 15px 20px; background-color: #263543; width: 100%;" align="left" onMouseOver="this.style.background='#ffffff'" 
-                            onMouseOut="this.style.background='#263543'">	
-							<a rel="noopener" href="https://enews.pennlive.com" target="_blank" style="font-family: Arial, sans-serif; mso-generic-font-family: swiss; font-weight: 800; font-style: normal; font-size: 16px; line-height: 18px; color:#0084ff; -webkit-text-fill-color: #0084ff; text-transform: uppercase; text-decoration: none; display: inline-block; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #0084ff; letter-spacing: -0.01px;">Explore now</a>
-						</td>
-						<tr>
-							<td height="25" style="font-size:10px; line-height:1;">&nbsp;</td>
-						</tr>
-				</table>
-				</td>
-					</tr>
-				</table>
-<!-- END CONTENT COLUMN -->
-
-<!-- START IMAGE COLUMN -->
-					<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
-						
-						<td class="stack imgresizeMobile"  align="left" valign="top">
 
 							<!--[if !mso]><!-->
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA-ANIMATION-again_1.gif" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
+							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA-ANIMATION-again4.gif" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
 							<!--<![endif]-->
 
 							<!--[if mso]>
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA%20ANIMATION%20again.jpg" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
+							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA%20ANIMATION%20again4.jpg" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
 							<![endif]-->
 
 						</td>			
 
-				</td>
-			</tr>
+					<!-- COLUMN SPACER -->
+						<td class="stack" width="10" align="center" valign="top" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
 
+			<!-- CONTENT COLUMN -->
+						<td class="stack" width="200" align="center" valign="top">
 
-		</table>
-	<!-- END LEFT SIDECAR -->
+						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0" >
+						<!-- MOBILE-ONLY SPACER: ADDS SPACE ABOVE HEADLINE -->
+						<tr>
+							<td class="desktopOff mobileOn" height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
+						</tr>
+					<!-- ROW SPACER -->
+					<tr>
+						<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+					</tr>
+
+				<!-- BODY TEXT 01 -->
+						<tr>
+							<td class="left-align w-pad" align="left" valign="top">
+								<p class="textMode p-text-resiz" style="font-size: 1em; line-height: 1.4; font-family: Arial, sans-serif;
+								mso-generic-font-family: swiss; font-weight: 400; font-style: normal; text-transform: none; display: inline-block; -webkit-text-fill-color: #ffffff; color:#ffffff;"> Subscribers get free access to the online newspaper with special sections, the New York Times Book Review, and Washington Post Weekly by activating their account.</p>
+							</td>
+						</tr>
+					<!-- ROW SPACER -->
+						<tr>
+							<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+						</tr>
+
+				<!-- BODY TEXT 02 -->
+				<tr>
+					<td class="left-align w-pad" align="left" valign="top">
+						<p class="textMode p-text-resiz" style="font-size: 1em; line-height: 1.4; font-family: Arial, sans-serif;
+						mso-generic-font-family: swiss; font-weight: 400; font-style: normal; text-transform: none; display: inline-block; -webkit-text-fill-color: #ffffff; color:#ffffff;"> 
+						<strong>Don&#8217;t have a login?</strong><br>Start by activating your account. <br class="mobile-break"> <em>Click here.</em> </p>	
+					</td>
+				</tr>
+			<!-- ROW SPACER -->
+				<tr>
+					<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+				</tr>
+
+				<!-- BULLETPROOF BUTTON -->
+						<tr>
+							<!-- CHANGE ALIGMENT ON THIS <td> -->
+							<td class="left-align w-pad" align="left" valign="top">
+							<!-- WIDTH ADJUSTMENT TABLE
+							ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
+							<table class="left-align" role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0">
+								<tr>
+									<!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
+									<td style="padding: 12px 12px 12px 18px; background-color: #ffffff;" align="left" 
+									onMouseOver="this.style.background='#263543'" 
+									onMouseOut="this.style.background='#ffffff'">	
+										<a rel="noopener" href="https://myaccount.pennlive.com" target="_blank" style="font-size: 22px; font-family: Helvetica, Arial, sans-serif; mso-generic-font-family: swiss; font-weight: regular; color: #0084ff; text-decoration: none; display: inline-block;">Activate account</a>
+									</td>
+								</tr>
+					<!-- ROW SPACER -->
+					<tr>
+						<td height="20" style="font-size:20px; line-height:1;">&nbsp;</td>
+					</tr>
+							</table>
+							</td>
+						</tr>
+				<!-- BODY TEXT 03 -->
+				<tr>
+					<td class="left-align w-pad" align="left" valign="top">
+						<p class="textMode p-text-resiz" style="font-size: 1em; line-height: 1.4; font-family: Arial, sans-serif;
+						mso-generic-font-family: swiss; font-weight: 400; font-style: normal; text-transform: none; display: inline-block; -webkit-text-fill-color: #ffffff; color:#ffffff;"> 
+						<strong>Already have a login? </strong><br>Explore your Online Newspaper. <br class="mobile-break"> <em>Click here.</em></p>
+					</td>
+				</tr>
+			<!-- ROW SPACER -->
+				<tr>
+					<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+				</tr>
+
+				<!-- BULLETPROOF BUTTON -->
+						<tr>
+							<!-- CHANGE ALIGMENT ON THIS <td> -->
+							<td class="left-align w-pad" align="left" valign="top">
+							<!-- WIDTH ADJUSTMENT TABLE
+							ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
+							<table class="left-align" role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0">
+								<tr>
+									<!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
+									<td style="padding: 12px 12px 12px 18px; background-color: #ffffff;" align="left" 
+									onMouseOver="this.style.background='#263543'" 
+									onMouseOut="this.style.background='#ffffff'">	
+										<a rel="noopener" href="https://enews.pennlive.com" target="_blank" style="font-size: 22px; font-family: Helvetica, Arial, sans-serif; mso-generic-font-family: swiss; font-weight: regular; color: #0084ff; text-decoration: none; display: inline-block;">Explore now</a>
+									</td>
+								</tr>
+					<!-- ROW SPACER -->
+					<tr>
+						<td height="20" style="font-size:20px; line-height:1;">&nbsp;</td>
+					</tr>
+							</table>
+							</td>
+						</tr>
+					</table>
+					</td>
+		<!-- END CONTENT COLUMN -->
+				</tr>
+			</table>
+
+			</td>
+		</tr>
+
+	</table>
+<!-- END LEFT SIDECAR -->
 
 </td>
 </tr>
 </table>
 <!-- END FULL WIDTH BACKGROUND COLOR - DARK -->
 
-<!-- FULL WIDTH BACKGROUND COLOR - LIGHT, FOOTER -->
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="footerMode"
-style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color:#1e1e1e;">
+
+
+<!-- FULL WIDTH BACKGROUND COLOR - FOOTER -->
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="footerMode">
     <tr>
         <td align="center" valign="top">
 
     <!-- SECONDARY HEADLINE -->
-    <table class="mobile-340" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode">
+    <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode">
         <!-- SPACER -->
             <tr>
                 <td height="45" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -475,21 +481,21 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
             <tr>
                 <td align="center" valign="top">
             <!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-                <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+                <table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
                     <tr>
                         <td align="left" valign="top">
-                            <h2 class="h2-text-resize" 
+                            <h2 class="footerMode h2-text-resize"
 							style="
-										font-size: 24px; 
-										line-height: 24px; 
-										font-family: Arial, sans-serif;
-										mso-generic-font-family: swiss;
-										font-weight: 900;
-										font-style: normal; 
-										text-transform: uppercase;
-										display: inline-block;
-										-webkit-text-fill-color: #0084ff;
-										color:#0084ff;">
+							font-size: 24px; 
+							line-height: 24px; 
+							font-family: Arial, sans-serif;
+							mso-generic-font-family: swiss;
+							font-weight: 900;
+							font-style: normal; 
+							text-transform: uppercase;
+							display: inline-block;
+							-webkit-text-fill-color: #0084ff;
+							color:#0084ff;">
 								We're here to help</h2>
                         </td>
                     </tr>
@@ -505,7 +511,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
     <!-- END SECONDARY HEADLINE -->
 
 	<!-- 2 COLUMN CONTENT: IMAGE, TEXT, BUTTON -->
-		<table class="mobile-340" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode" >
+		<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode" >
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -513,34 +519,19 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 			<tr>
 				<td align="center" valign="top">
 		<!-- PARENT ALIGNMENT TABLE -->
-				<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 			<!-- LEFT COLUMN -->
 						<td class="stack" width="400" align="left" valign="top">
 
-						<table class="mobile-320" role="presentation" cellpadding="0" cellspacing="0" border="0">
+						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0">
 					<!-- BODY TEXT -->
 			<!-- DEESKTOP-ONLY CONTACTS LIST -->						
 							<tr>
 								<td align="left" valign="top">
-									<p style="
-											font-size: 1em; 
-											line-height: 1.4; 
-											font-family: Arial, sans-serif;
-											mso-generic-font-family: swiss;
-											font-weight: 100;
-											font-style: normal; 
-											text-transform: none;
-											display: block;
-											-webkit-font-smoothing: antialiased;
-											-moz-osx-font-smoothing: grayscale;
-											-webkit-text-fill-color: #1e1e1e;
-											color:#1e1e1e" 
-										class="footerMode"><nobr>Having trouble viewing this email?</nobr> 
-										<a rel="noopener" href="{view_url}" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode"><br class="mobile-break">View in your browser	
-											<span class="desktopOn mobileOff"><br><br></span></a>
-											To ensure receipt of our emails, please add <a rel="noopener" href="mailto:customercare@sts.pennlive.com" target="_blank" style="text-decoration:underline;"class="footerMode">customercare@sts.pennlive.com</a> to your address book or a safe sender list. You received this email because you are a subscriber to <a rel="noopener" href="https://pennlive.com" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">pennlive.com</a> or The Patriot News.</p>
-										</td>
+									<p style="font-family: 'Arial', sans-serif; font-size: 13.5px; line-height: 1.4;" class="footerMode">Having trouble viewing this email? <a rel="noopener" href="{view_url}" target="_blank" style="text-decoration:underline;"class="footerMode">View in your browser	
+									<span class="desktopOn mobileOff"><br><br></span></a>
+									To ensure receipt of our emails, please add <a rel="noopener" href="mailto:customercare@sts.pennlive.com" target="_blank" style="text-decoration:underline;"class="footerMode">customercare@sts.pennlive.com</a> to your address book or a safe sender list. You received this email because you are a subscriber to <a rel="noopener" href="https://pennlive.com" target="_blank" style="text-decoration:underline;"class="footerMode">pennlive.com</a> or The Patriot News.</p>
 								</td>
 
 							</tr>
@@ -548,40 +539,28 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 
 						</td>
 			<!-- END LEFT COLUMN -->
-			<!-- COLUMN SPACER -->
-						<td class="stack" width="10" align="center" valign="top" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
 
+										<!-- COLUMN SPACER -->
+						<td class="stack" width="10" align="center" valign="top" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
 
 			<!-- RIGHT COLUMN -->
 						<td class="stack" width="190" align="center" valign="top">
-						<table class="mobile-320" role="presentation" cellpadding="0" cellspacing="0" border="0">
 
+						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0">
+			<!-- MOBILE-ONLY SPACER: ADDS SPACE ABOVE CONTACTS LIST -->
+						<tr>
+							<td class="desktopOff mobileOn" height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+						</tr>
 					<!-- BODY TEXT -->
 							<tr>
-						<!-- ROW SPACER -->
-						<tr>
-							<td class="mobile-break" height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
-						</tr>								
 								<td align="left" valign="top">
-                                    <p style="
-											font-size: 1em; 
-											line-height: 1.44; 
-											font-family: Arial, sans-serif;
-											mso-generic-font-family: swiss;
-											font-weight: 100;
-											font-style: normal; 
-											text-transform: none;
-											display: block;
-											-webkit-font-smoothing: antialiased;
-											-moz-osx-font-smoothing: grayscale;
-											-webkit-text-fill-color: #1e1e1e;
-											color:#1e1e1e">
-                                        <a rel="noopener" href="https://www.thepamediagroup.com/contact/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Contact Us</a><br>
-                                        <a rel="noopener" href="https://www.pennlive.com/mobile-device/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Download our app</a><br>
-                                        <a rel="noopener" href="https://www.pennlive.com/privacy-policy/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Privacy policy</a><br>
-                                        <a rel="noopener" href="https://subscription.pennlive.com/newsletters/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">More newsletters</a><br>
-                                        <a rel="noopener" href="https://myaccount.pennlive.com" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Manage subscription</a><br>
-                                        <a rel="noopener" href="{optout_confirm_url + '&list_param=' + blast.list}" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Unsubscribe</a>
+                                    <p style="font-family: 'Arial', sans-serif; font-size: 13.5px; line-height: 1.4; color: #000000;">
+                                        <a rel="noopener" href="https://www.thepamediagroup.com/contact/" target="_blank" style="text-decoration:underline;"class="footerMode">Contact Us</a><br>
+                                        <a rel="noopener" href="https://www.pennlive.com/mobile-device/" target="_blank" style="text-decoration:underline;"class="footerMode">Download our app</a><br>
+                                        <a rel="noopener" href="https://www.pennlive.com/privacy-policy/" target="_blank" style="text-decoration:underline;"class="footerMode">Privacy policy</a><br>
+                                        <a rel="noopener" href="https://subscription.pennlive.com/newsletters/" target="_blank" style="text-decoration:underline;"class="footerMode">More newsletters</a><br>
+                                        <a rel="noopener" href="https://myaccount.pennlive.com" target="_blank" style="text-decoration:underline;"class="footerMode">Manage subscription</a><br>
+                                        <a rel="noopener" href="{optout_confirm_url + '&list_param=' + blast.list}" target="_blank" style="text-decoration:underline;"class="footerMode">Unsubscribe</a>
                                     </p>
 								</td>
 							</tr>
@@ -605,7 +584,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 
 			
 	<!-- ! ADDRESS ! REQUIRED FOR ALL EMAILS ! -->
-		<table class="mobile-320 footerMode" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+		<table class="mobile-320 footerMode" role="presentation" width="640" cellpadding="0" cellspacing="0" bgcolor="#ffffff"  border="0">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -613,7 +592,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE -->
-				<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 
 				<!-- LOGO BAR  -->
 					<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
@@ -622,10 +601,24 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 						<td class="imgresize100h img" align="left" valign="top">
 
 							<div class="lightimageFooter" style="margin:0; padding:0; border:none; display: inline-block;">
-								<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_Harrisburg%20LIGHT.png" height="50" class="lightimageFooter" style="margin:0; padding:0; border:none;" alt="The Patriot News Online">
-								<span class="mobileOff">&nbsp;&#8203;&nbsp;&#8203;</span>
+								<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_Harrisburg%20LIGHT.png" height="50" class="lightimageFooter" style="margin:0; padding:0; border:none;" 
+                                alt="The Patriot News Online">
+								<span class="mobileOff desktopOn">&nbsp;&#8203;&nbsp;&#8203;</span>
+                                <span class="desktopOff mobileOn"><br></span>
 								<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_COMpennlive%20LIGHT.png" height="50" alt="pennlive.com" >
-							</div>	
+							</div>
+
+							<div class="darkimageWrapperFooter" style="mso-hide: all; display: none">
+								<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_Harrisburg%20DARK.png" height="50" class="darkimageFooter" style="margin:0; padding:0; border:none; display:none;" 
+                                alt="The Patriot News Online">
+								<span class="mobileOff desktopOn">&nbsp;&#8203;&nbsp;&#8203;</span>
+                                <span class="desktopOff mobileOn"><br></span>
+								<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/PA_COMpennlive%20DARK.png" height="50" alt="pennlive.com" >
+							</div>
+
+							
+						</td>
+
 
                 <!-- ADDRESS -->
 
@@ -634,21 +627,8 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 				</tr>
 				<tr>
 					<td align="left" valign="top">
-						<p class="footer-resize" style="
-									font-size: 0.8em; 
-									letter-spacing: 3px; 
-									line-height: 1.4; 
-									font-family: Arial, sans-serif;
-									mso-generic-font-family: swiss;
-									font-weight: 100;
-									font-style: normal; 
-									text-transform: uppercase;
-									display: block;
-									-webkit-font-smoothing: antialiased;
-									-moz-osx-font-smoothing: grayscale;
-									-webkit-text-fill-color: #1e1e1e;
-									color:#1e1e1e">
-					1900 Patriot Drive, Mechanicsburg, PA 17050</p>
+						<p style="font-family: 'Arial', sans-serif; font-size: 10px; line-height: 1.4; text-transform: uppercase;" > 
+                            1900 Patriot Drive, Mechanicsburg, PA 17050</p>
 					</td>
 				</tr>
 				</table>
@@ -660,20 +640,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 				<!-- COPYRIGHT -->
 					<tr>
 						<td align="left" valign="top">
-							<i style="
-									font-size: 10px; 
-									line-height: 1.4; 
-									font-family: Arial, sans-serif;
-									mso-generic-font-family: swiss;
-									font-weight: 100;
-									font-style: italic; 
-									text-transform: none;
-									display: block;
-									-webkit-font-smoothing: antialiased;
-									-moz-osx-font-smoothing: grayscale;
-									-webkit-text-fill-color: #9d9d9d;
-									color:#1e1e1e">
-								©2023 Advance Local. All rights reserved.</i>
+							<i style="font-family: 'Arial', sans-serif; font-size: 10px; line-height: 1.4; color: #4a4a4a;">©2023 Advance Local. All rights reserved.</i>
 						</td>
 					</tr>
 			</tr>
