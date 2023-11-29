@@ -20,7 +20,7 @@
 		body, table, td, a, p { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 		img { -ms-interpolation-mode: bicubic; }
-		.mobile-break { display: none; }
+		.mobile-break { display: none !important; }
 		strong {
             font-weight: 900; 
             text-transform: uppercase;
@@ -32,7 +32,7 @@
 		table { border-collapse: collapse !important; }
 		body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
 		h1, h2, h3, h4, h5, h6, p { margin: 0 !important; }
-		h1 {font-size: clamp(56px, 4.2vw, 70px); }
+		h1 {font-size: clamp(56px, 4.2vw, 65px) !important; color: #ffffff !important; }
 		h2 {font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 24px;}
 
 			
@@ -103,10 +103,10 @@
 		.lightMode { display: block !important; max-height:none !important; font-size:10px !important; }
 
 		/* LIGHT COLOR SCHEME */
-		.standardMode { background-color: #0084ff; }
-		.footerMode {background-color: #ffffff; color: #1e1e1e;}
-		.textMode {color: #ffffff}
-		.accentMode {color:#263543}
+		.standardMode { background-color: #0084ff !important; }
+		.footerMode {background-color: #ffffff !important; color: #1e1e1e !important;}
+		.textMode {color: #ffffff !important;}
+		.accentMode {color:#263543 !important;}
 
 		:root {
 			color-scheme: light dark;
@@ -131,10 +131,10 @@
 			/*DARK MODE RESET STYLES*/
 			.lightMode { width: 0px !important; display: none !important; }
 			.darkMode { display: block !important; max-height:none !important; font-size:10px !important; }
-			.standardMode { background-color: #0084ff; }
-			.footerMode {background-color: #1e1e1e; color: #ffffff;}
-			.textMode {color: #ffffff;}
-			.accentMode {color: #263543;}
+			.standardMode { background-color: #0084ff !important; }
+			.footerMode {background-color: #1e1e1e !important; color: #ffffff !important;}
+			.textMode {color: #ffffff !important;}
+			.accentMode {color: #263543 !important;}
 		}
 		/*INSERT ADDITIONAL DARK MODE SYTLES ABOVE THIS LINE*/
 		em {
@@ -210,7 +210,7 @@ color:#000000 !important;
 
 
 <!-- FULL WIDTH BACKGROUND COLOR - ADJUSTABLE -->
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#0084ff" class="standardMode">
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#0084ff" style="background-color:#0084ff;background-image: linear-gradient(#0084ff,#0084ff); class="standardMode">
 	
 	<tr>
 
@@ -340,11 +340,11 @@ color:#000000 !important;
 
 
 							<!--[if !mso]><!-->
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA-ANIMATION-again4.gif" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
+							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA-ANIMATION-SIA.gif" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
 							<!--<![endif]-->
 
 							<!--[if mso]>
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA%20ANIMATION%20again4.jpg" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
+							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/EXTRA%20ANIMATION%20SIA.jpg" width="410" style="margin:0; padding:0; border:none; display:block" border="0" alt="Extra" />
 							<![endif]-->
 
 						</td>			
